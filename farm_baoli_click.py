@@ -52,52 +52,20 @@ def Screenshot(x, y):
 
 #pyautogui.screenshot
 
-def JudgeScreenMove(png,x0,y0):
-    try:
-        x, y = pyautogui.locateCenterOnScreen(png)
-        print("Tmp screenshot coordi: ",x,", ",y)
-        #break
-        print(x0,y0)
-        if ( x - 10) == x0 and ( y - 10) == y0:
-            return 0
-        else:
-            print("Screen moved.")
-            return 1
-    except:
-        #time.sleep(0.5)             #sleep 1.5s
-        print("Screen moved.")
-        return 1
 
 ####################################################
 ############# Main Program #########################
 
-try:
-    x0, y0 = pyautogui.locateCenterOnScreen(sickle_sel)
-    flag = 1
-    y0 = y0 - 200
-except:
-    flag = 0
-    
-if flag == 0:
-    print("Damm it! No farm icon found!")
-    sys.exit()
+a1 = (859,523)
+a2 = (902,517)
+a3 = (933,509)
 
-print("located " + sickle_sel )
-print("its coordination are:", x0, y0+200)
 
 i = 0
-while i < 100:
+while i < 10000:
     i = i + 1
-    for j in (sickle_sel,axe_sel,hammer_sel):
-        ClickPng(j,1)
-        time.sleep(0.1)
-
-        while JudgeScreenMove(tmp_scrshot,x0,y0):
-            Screenshot(x0,y0)
-            #ClickPng(weapon[j],2)
-            pyautogui.doubleClick(1234, 452, 2)
-            time.sleep(0.5)
-
+    pyautogui.doubleClick(1234, 452, 2)
+    time.sleep(0.05)
 
 #pyautogui.typewrite(str(tmppage), interval=0.1)
 #pyautogui.press('enter')
