@@ -96,7 +96,7 @@ while i < 100:
             Screenshot(x0,y0)
             #ClickPng(weapon[j],2)
             pyautogui.doubleClick(1234, 452, 2)
-            time.sleep(0.5)
+            time.sleep(0.3)
 
 
 #pyautogui.typewrite(str(tmppage), interval=0.1)
