@@ -4,9 +4,7 @@ from pathlib import Path
 from PIL import Image
 #### Prerequisite:
 #### (--index-url https://pypi.douban.com/simple)
-####    python -m pip install PyAutoGUI
-####    python -m pip install Pillow
-####    python -m pip install pywin32 [win32gui is a part of it]
+####    python -m pip install pyautogui
 
 
 #Initial Variables
@@ -66,9 +64,3 @@ while i < 10000:
     i = i + 1
     pyautogui.doubleClick(1234, 452, 2)
     time.sleep(0.05)
-
-#pyautogui.typewrite(str(tmppage), interval=0.1)
-#pyautogui.press('enter')
-#os.remove("tmp\\"+"a.png")
-#pyautogui.hotkey('alt', 'f4')
-
